@@ -1,0 +1,31 @@
+const NFTs=[]
+function mintNFT(_Brandname,_Modelname,_HorsePower)
+{
+    const NFT ={
+        "brand": _Brandname,
+        "model": _Modelname,
+        "hp": _HorsePower
+     }
+     NFTs.push(NFT);
+     console.log("Minted: "+_Brandname);
+}
+function listNFTs()
+{
+    for(let i=0;i<NFTs.length;i++)
+        {
+            console.log("\nBrand:\t" + NFTs[i].brand);
+            console.log("Model:\t" + NFTs[i].model);
+            console.log("HP:\t" + NFTs[i].hp);
+        }
+}
+function getTotalSupply()
+{
+    console.log("\nTotal number of NFTs minted: "+ NFTs.length);
+}
+
+mintNFT("Dodge","CHALLENGER SRT® SUPER STOCK","807");
+mintNFT("Chevrolet","Camaro","650");
+mintNFT("BMW","M8 Competition Coupé","617");
+mintNFT("Ford","Mustang Dark Horse","500");
+listNFTs();
+getTotalSupply();
